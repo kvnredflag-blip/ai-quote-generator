@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #22c55e;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>AI Quote Generator</h1>
+  <p id="quote">Click button to generate quote</p>
+  <button onclick="generateQuote()">Generate</button>
+</div>
+
+<script>
+const quotes = [
+  "Discipline beats motivation.",
+  "Work in silence, win in public.",
+  "You are your only competition.",
+  "Success is built daily.",
+  "Focus creates power."
+];
+
+function generateQuote() {
+  let random = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerText = quotes[random];
+}
+</script>
+
+</body>
+</html>
